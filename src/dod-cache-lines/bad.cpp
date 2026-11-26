@@ -171,7 +171,7 @@ int main(int argc, char* argv[]) {
     auto t1 = std::chrono::steady_clock::now();
     double ms = std::chrono::duration<double, std::milli>(t1 - t0).count();
 
-    std::printf("check = %lld", check);
+    std::printf("check = %lld\n", check);
     std::printf("bad  (vector of struct): %.4f ms\n", ms);
 
     return 0;
