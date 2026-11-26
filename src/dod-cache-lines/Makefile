@@ -22,6 +22,18 @@ run-binary: all
 	@echo
 	./good --binary
 
+run-binary-prefecth: all
+	@echo "=== BINARY-PREFECTH ==="
+	./bad --binary --prefetch
+	@echo
+	./good --binary --prefetch
+
+run-binary-branchless-prefetch: all
+	@echo "=== BINARY-BRANCHLESS-PREFETCH ==="
+	./bad --binary --prefetch --branchless
+	@echo
+	./good --binary --prefetch --branchless
+
 run: run-linear
 	@echo
 	@$(MAKE) --no-print-directory run-binary
